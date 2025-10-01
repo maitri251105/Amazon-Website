@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+#SignUp-Page {
+  #sign-Up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding-bottom: 100px;
+    border-bottom: 2px solid rgb(152, 152, 152);
+
+    #sign-up-container {
+      padding: 30px;
+      border: 1px solid rgb(130, 130, 130);
+      border-radius: 10px;
+
+      .heading {
+        font-size: 20px;
+        font-weight: 600;
+        padding-bottom: 20px;
+      }
+
+      form {
+        label {
+          font-size: 14px;
+          color: black;
+          font-weight: 600;
+        }
+
+        input,
+        button {
+          width: 280px;
+          padding: 7px;
+          border: 1px solid grey;
+          border-radius: 5px;
+          background-color: none;
+        }
+
+        input[type='text']:focus {
+          outline: 1px solid rgba(32, 153, 213, 0.849);
+        }
+
+        input[type='email']:focus {
+          outline: 1px solid rgba(32, 153, 213, 0.849);
+        }
+
+        input[type='password']:focus {
+          outline: 1px solid rgba(32, 153, 213, 0.849);
+        }
+
+        button {
+          background-color: rgb(237, 203, 11);
+          border: none;
+          border-radius: 15px;
+          padding: 10px 4px;
+        }
+
+        button:hover {
+          background-color: rgb(248, 183, 62);
+        }
+      }
+
+      .condition2,
+      .help2 {
+        font-size: 13px;
+        line-height: 20px;
+
+        a {
+          color: #2a85e0;
+          font-size: 13px;
+        }
+      }
+
+      .condition2 {
+        margin: 16px 0 14px;
+      }
+
+      .help2 {
+        a {
+          text-decoration: none;
+        }
+      }
+
+      .help2:hover {
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  #signUp-footer {
+    font-size: 12px;
+    background-color: white;
+
+    ul {
+      padding-top: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+
+      li {
+        list-style-type: none;
+
+        a {
+          text-decoration: none;
+          color: #2162A1;
+          letter-spacing: 1px;
+        }
+
+        a:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .text {
+      text-align: center;
+      padding-top: 15px;
+
+    }
+  }
+}

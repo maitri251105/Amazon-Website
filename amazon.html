@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping Site in India: Shop Online for Mobiles, Books, Watches, ...</title>
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="amazon.css">
+    <!-- jQuery Link -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Favicon Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="Images/amazon-favicon.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <div id="container">
+
+        <!-- ============== Header 1 ============== -->
+
+        <header id="header-1">
+
+            <!-- logo -->
+            <a href="index_new.html" id="logo">
+                <img src="Images/amazon-logo.jpg" alt="Amazon Logo">
+            </a>
+
+            <!-- Address -->
+            <div id="address">
+                <div id="add-icon"></div>
+                <div id="add-text">
+                    <div id="add-info">Delivering to Ahmedabad 380001</div>
+                    <div id="location">Update Location</div>
+                </div>
+            </div>
+
+            <!-- Search -->
+            <div id="search-box">
+                <div id="dropdown" onclick="toggle()">
+                    <ul id="search-select"></ul>
+                    <div id="selected-text">All</div>
+                    <div id="dropdown-icon"><i class="fa-solid fa-caret-down"></i></div>
+                </div>
+                <input type="text" id="search-text" placeholder="Search Amazon.in" onkeyup="search()">
+                <button id="search-btn">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <!-- country -->
+            <div id="country">
+                <div id="country-logo">
+                    <img src="images/india-flag.png" alt="Flag">
+                </div>
+                <div id="language">
+                    <b>EN</b>
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+
+            <!-- Sign up -->
+            <div id="sign-in">
+                <div id="sign_up">
+                    <div id="login">Hello, Sign in</div>
+                    <div id="acc-lists">
+                        <b>Account & Lists</b>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- return & order -->
+            <div id="return-orders">
+                <div id="returns">Returns</div>
+                <div id="orders">
+                    <b>& Orders</b>
+                </div>
+            </div>
+
+            <!-- cart -->
+            <div id="cart" onclick="cart1()">
+                <div id="no_of_items">0</div>
+                <div id="cart-logo">
+                    <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                </div>
+                <div id="cart-text">
+                    <b>Cart</b>
+                </div>
+            </div>
+
+        </header>
+
+
+        <!-- sidebar -->
+        <div id="sidebar">
+            <div class="sidebar-closebtn">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="account">
+                <div class="profile">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="profile-name">Hello, Sign in</div>
+            </div>
+            <div class="block1 block">
+                <div class="heading">Trending</div>
+                <ul>
+                    <li>Bestsellers</li>
+                    <li>New Releases</li>
+                    <li>Movers and Shakers</li>
+                </ul>
+            </div>
+            <div class="block2 block">
+                <div class="heading">Shop by Category</div>
+                <ul>
+                    <li>Mobiles, Computers</li>
+                    <li>TV, Appliances, Electronics</li>
+                    <li>Men's Fashion</li>
+                </ul>
+            </div>
+            <div class="block2 block">
+                <div class="heading">Digital Content and Devices</div>
+                <ul>
+                    <li>Echo & Alexa</li>
+                    <li>Fire TV</li>
+                    <li>Kindle E-readers & eBooks</li>
+                    <li>Audiable Audiobooks</li>
+                    <li>Amazon Prime Video</li>
+                    <li>Amazon Prime Music</li>
+                </ul>
+            </div>
+            <div class="settings block">
+                <div class="heading">Help & Settings</div>
+                <ul>
+                    <li>Your Account</li>
+                    <li>Customer Service</li>
+                    <li id="log-out" onclick="signOut()">Log in</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ============== Header 2 ============== -->
+        <div id="header-2">
+            <ul>
+                <li>
+                    <i class="fa-solid fa-bars" style="color: #f4f7fa;"></i>All
+                </li>
+                <li>Fresh</li>
+                <li>MX Player</li>
+                <li>Sell</li>
+                <li>Bestsellers</li>
+                <li>Today's Deals</li>
+                <li>Mobiles</li>
+                <li>Prime <i class="fa-solid fa-caret-down"></i></li>
+                <li>Customer Service</li>
+                <li>New Releases</li>
+                <li>Electronics</li>
+                <li>Fashion</li>
+                <li>Amazon Pay</li>
+                <li>Home & Kitchen</li>
+                <li>Computers</li>
+                <li>Books</li>
+            </ul>
+        </div>
+
+
+        <!-- ============== main section ============== -->
+        <div id="main-section">
+            <!-- hero section-- SLIDER -->
+            <div id="hero-section">
+                <div id="slider-container">
+                    <div id="sliders"></div>
+                </div>
+                <button id="prev" onclick="previndex()">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button id="next" onclick="nextindex()">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <!-- discount blocks -->
+            <div id="dis-blocks">
+            </div>
+
+            <div id="all-products">
+                <div id="filter-section">
+
+                    <button class="apply-filter" onclick="sort()">Apply Filter</button>
+
+
+                    <div id="category" style="margin-top: 15px;">
+                        <table cellspacing="7">
+                            <tr>
+                                <th colspan="2">Category</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="men" id="">
+                                    <label for="">Men</label>
+                                </td>
+                                <td>[4]</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="women" id="">
+                                    <label for="">Women</label>
+                                </td>
+                                <td>[4]</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="kids" id="">
+                                    <label for="">Kids</label>
+                                </td>
+                                <td>[4]</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="Bags & Luggage" id="">
+                                    <label for="">Bags & Luggage</label>
+                                </td>
+                                <td>[4]</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="Sportswear" id="">
+                                    <label for="">Sportswear</label>
+                                </td>
+                                <td>[5]</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="price">
+                        <table cellspacing="7">
+                            <tr>
+                                <th>Price</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="below 300" id="">
+                                    <label for="">Below 300</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="300 - 500" id="">
+                                    <label for="">300 - 500</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="500 - 700" id="">
+                                    <label for="">500 - 700</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="700 - 1000" id="">
+                                    <label for="">700 - 1000</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="above 1000" id="">
+                                    <label for="">Above 1000</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="color">
+                        <table cellspacing="7">
+                            <tr>
+                                <th colspan="2">Colors</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="black" id="">
+                                    <label for="">Black</label>
+                                </td>
+                                <td class="color-box box1"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="green" id="">
+                                    <label for="">Green</label>
+                                </td>
+                                <td class="color-box box2"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="white" id="">
+                                    <label for="">White</label>
+                                </td>
+                                <td class="color-box box3"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="red" id="">
+                                    <label for="">Red</label>
+                                </td>
+                                <td class="color-box box4"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="rating">
+                        <table cellspacing="7">
+                            <tr>
+                                <th>Rating</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="1" id="">
+                                    <label for="">1</label>
+                                    <i class="fa-solid fa-star" style="color: #fc9403;"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="2" id="">
+                                    <label for="">2</label>
+                                    <i class="fa-solid fa-star" style="color: #fc9403;"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="3" id="">
+                                    <label for="">3</label>
+                                    <i class="fa-solid fa-star" style="color: #fc9403;"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="4" id="">
+                                    <label for="">4</label>
+                                    <i class="fa-solid fa-star" style="color: #fc9403;"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="5" id="">
+                                    <label for="">5</label>
+                                    <i class="fa-solid fa-star" style="color: #fc9403;"></i>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div id="product-section"></div>
+            </div>
+        </div>
+
+
+        <!-- ============== back to top ============== -->
+        <div id="back-to-top" class="back">
+            Back To Top
+        </div>
+
+        <!-- ============== footer ============== -->
+        <div id="footer">
+            <div id="footer-content">
+                <ul class="list1"></ul>
+                <ul class="space"></ul>
+                <ul class="list2"></ul>
+                <ul class="space"></ul>
+                <ul class="list3"></ul>
+                <ul class="space"></ul>
+                <ul class="list4"></ul>
+            </div>
+        </div>
+
+        <!-- ============== footer 2 ============== -->
+        <div id="footer2">
+            <div class="line-1">
+                <ul>
+                    <li>Conditions of Use & Sale</li>
+                    <li>Privacy Notice</li>
+                    <li>Interest-Based Ads</li>
+                </ul>
+            </div>
+            <div class="line-2">© 1996-2025, Amazon.com, Inc. or its affiliates</div>
+        </div>
+    </div>
+
+    <!-- JavaScript Link -->
+    <script src="amazon.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Cart</title>
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="amazon.css">
+    <!-- jQuery Link -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <!-- Favicon Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="Images/amazon-favicon.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <header id="header-1">
+
+        <!-- logo -->
+        <a href="amazon.html" id="logo">
+            <img src="Images/amazon-logo.jpg" alt="Amazon Logo">
+        </a>
+
+        <!-- Address -->
+        <div id="address">
+            <div id="add-icon"></div>
+            <div id="add-text">
+                <div id="add-info">Delivering to Ahmedabad 380001</div>
+                <div id="location">Update Location</div>
+            </div>
+        </div>
+
+        <!-- Search -->
+        <div id="search-box">
+            <div id="dropdown" onclick="toggle()">
+                <ul id="search-select"></ul>
+                <div id="selected-text">All</div>
+                <div id="dropdown-icon"><i class="fa-solid fa-caret-down"></i></div>
+            </div>
+            <input type="text" id="search-text" placeholder="Search Amazon.in" onkeyup="search()">
+            <button id="search-btn">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <!-- country -->
+        <div id="country">
+            <div id="country-logo">
+                <img src="images/india-flag.png" alt="Flag">
+            </div>
+            <div id="language">
+                <b>EN</b>
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+        </div>
+
+        <!-- Sign in -->
+        <div id="sign-in">
+            <div id="sign_up">
+                <div id="login">Hello, Sign in</div>
+                <div id="acc-lists">
+                    <b>Account & Lists</b>
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- return & order -->
+        <div id="return-orders">
+            <div id="returns">Returns</div>
+            <div id="orders">
+                <b>& Orders</b>
+            </div>
+        </div>
+
+        <!-- cart -->
+        <div id="cart">
+            <div id="no_of_items"></div>
+            <div id="cart-logo">
+                <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+            </div>
+            <div id="cart-text">
+                <b>Cart</b>
+            </div>
+        </div>
+
+    </header>
+
+
+    <!-- sidebar -->
+    <div id="sidebar">
+        <div class="sidebar-closebtn">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="account">
+            <div class="profile">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="profile-name">Hello, Sign in</div>
+        </div>
+        <div class="block1 block">
+            <div class="heading">Trending</div>
+            <ul>
+                <li>Bestsellers</li>
+                <li>New Releases</li>
+                <li>Movers and Shakers</li>
+            </ul>
+        </div>
+        <div class="block2 block">
+            <div class="heading">Shop by Category</div>
+            <ul>
+                <li>Mobiles, Computers</li>
+                <li>TV, Appliances, Electronics</li>
+                <li>Men's Fashion</li>
+            </ul>
+        </div>
+        <div class="block2 block">
+            <div class="heading">Digital Content and Devices</div>
+            <ul>
+                <li>Echo & Alexa</li>
+                <li>Fire TV</li>
+                <li>Kindle E-readers & eBooks</li>
+                <li>Audiable Audiobooks</li>
+                <li>Amazon Prime Video</li>
+                <li>Amazon Prime Music</li>
+            </ul>
+        </div>
+        <div class="settings block">
+            <div class="heading">Help & Settings</div>
+            <ul>
+                <li>Your Account</li>
+                <li>Customer Service</li>
+                <li id="log-out" onclick="signOut()">Log in</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ============== Header 2 ============== -->
+    <div id="header-2">
+        <ul>
+            <li>
+                <i class="fa-solid fa-bars" style="color: #f4f7fa;"></i>All
+            </li>
+            <li>Fresh</li>
+            <li>MX Player</li>
+            <li>Sell</li>
+            <li>Bestsellers</li>
+            <li>Today's Deals</li>
+            <li>Mobiles</li>
+            <li>Prime <i class="fa-solid fa-caret-down"></i></li>
+            <li>Customer Service</li>
+            <li>New Releases</li>
+            <li>Electronics</li>
+            <li>Fashion</li>
+            <li>Amazon Pay</li>
+            <li>Home & Kitchen</li>
+            <li>Computers</li>
+            <li>Books</li>
+        </ul>
+    </div>
+
+    <div id="Empty-cart-Page">
+        <div id="empty-cart">
+            <img src="images/cart_image.svg" alt="Cart-image" height="320" width="370">
+            <div id="login">
+                <div class="heading">Your Amazon Cart is Empty</div>
+                <div class="text">Shop today's deals</div>
+                <div class="buttons">
+                    <a href="login.html" class="button1">Sign in to your account</a>
+                    <a href="sign_up.html" class="button2">Sign up now</a>
+                </div>
+            </div>
+        </div>
+        <div id="para">The price and availability of items at Amazon.in are subject to change. The shopping cart is
+            a temporary place to store a list of your items and reflects each item's most recent price.<br>
+            Do you have a promotional code? We'll ask you to enter your claim code when it's time to pay.</div>
+        <div id="signup">
+            <br>
+            <div id="signup-content">
+                <div class="heading">See personilized recommenditions</div>
+                <a href="login.html" class="button">Sign in</a>
+                <div class="text">New customer? <a href="">Start here</a></div>
+            </div>
+            <br>
+            <br>
+        </div>
+    </div>
+
+    <div id="cart-page">
+        <div id="your-empty-cart">
+            <div class="heading">Your Amazon Cart</div>
+            <div class="text">Your shopping cart is waiting. Give it purpose – fill it with groceries, clothing,
+                household supplies, electronics and more. <br>
+                Continue shopping on the <a href="amazon.html">Amazon.in homepage</a>, learn about <a
+                    href="amazon.html">today's deals</a>, or visit your <a href="amazon.html">Wish List</a>.
+            </div>
+        </div>
+
+        <div id="your-items">
+            <div class="heading">Your Items</div>
+            <div id="cart-item-container"></div> <br><br>
+            <a href="payment.html" class="payment">Procced to Pay</a>
+        </div>
+
+        <div id="cart-info">The price and availability of items at Amazon.in are subject to change. The shopping
+            cart is a temporary place to store a list of your items and reflects each item's most recent price. <br>
+            Do you have a promotional code? We'll ask you to enter your claim code when it's time to pay.</div>
+
+        <div id="product-details">
+            <div class="text-container">
+                <div class="text1">After viewing product detail pages, look here to find an easy way to navigate
+                    back to
+                    pages you are interested in</div>
+                <div class="text2">›
+                    <a href="amazon.html">View or edit <br> your browsing <br> history</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============== back to top ============== -->
+    <div id="back-to-top" class="back">
+        Back To Top
+    </div>
+
+    <!-- ============== footer ============== -->
+    <div id="footer">
+        <div id="footer-content">
+            <ul class="list1"></ul>
+            <ul class="space"></ul>
+            <ul class="list2"></ul>
+            <ul class="space"></ul>
+            <ul class="list3"></ul>
+            <ul class="space"></ul>
+            <ul class="list4"></ul>
+        </div>
+    </div>
+
+    <!-- ============== footer 2 ============== -->
+    <div id="footer2">
+        <div class="line-1">
+            <ul>
+                <li>Conditions of Use & Sale</li>
+                <li>Privacy Notice</li>
+                <li>Interest-Based Ads</li>
+            </ul>
+        </div>
+        <div class="line-2">© 1996-2025, Amazon.com, Inc. or its affiliates</div>
+    </div>
+
+
+    <script src="cart.js"></script>
+
+</body>
+
+</html>

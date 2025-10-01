@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="login.css">
+    <!-- Favicon Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="Images/amazon-favicon.png" type="image/x-icon">
+
+</head>
+<body>
+    
+     <div id="signIn-Page">
+        <div id="sign-In">
+            <img src="images/amazon-logo-black.png" alt="logo" height="120" width="170">
+            <div id="sign-in-container">
+
+                <div class="heading">Sign in or <a href="sign_up.html">Create account</a></div>
+
+                <form class="form1">
+                    <label>Enter email</label><br>
+                    <input type="email" id="email1"><br><br>
+
+                    <label>Enter password</label><br>
+                    <input type="password" id="password1"><br><br>
+
+                    <button type="button" onclick="validateSignIn(event)">Continue</button>
+                </form>
+
+                <div class="condition1"></div>
+                <div class="help1"></div>
+            </div>
+        </div>
+        <div id="login-footer"></div>
+    </div>
+
+    <script src="login.js"></script>
+
+</body>
+</html>
