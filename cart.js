@@ -325,7 +325,7 @@ function renderCart() {
         text2.classList.add("text2");
         text2.innerText = "Shop items";
         text2.onclick = () => {
-            window.location.href = "amazon.html";
+            window.location.href = "index.html";
         };
         
         category.append(text1, text2);

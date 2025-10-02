@@ -33,7 +33,7 @@ function validateSignIn(e) {
         
 
         setTimeout(() => {
-            window.location.href = "amazon.html";
+            window.location.href = "index.html";
         }, 500);
     } else {
         alert("Incorrect email or password. Please try again.");

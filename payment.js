@@ -32,5 +32,5 @@ function payNow() {
   alert(`Payment of ₹${totalPayable} successful!\nPaid by: ${selectedPayment}\nThank you, ${username}!`);
 
   localStorage.removeItem("myCart123456");
-  location.href = "amazon.html";
+  location.href = "index.html";
 }
